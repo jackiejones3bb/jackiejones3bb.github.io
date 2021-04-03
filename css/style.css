@@ -1,3 +1,5 @@
+
+ 
 body {
     position: relative;
     background: #f5e4e0;
@@ -64,7 +66,7 @@ hr {
 
 #home-section .btn{
     margin-top: 35px;
-    padding: 10px;
+
     color: #a88e88;
 }
 
@@ -101,6 +103,10 @@ hr {
     border-radius: 10px;
 }
 
+.about-text {
+    line-height: 180%;
+}
+
 
 
 
@@ -131,6 +137,10 @@ hr {
 
 #skills-section img {
     padding: 10px;
+}
+
+.skills-text {
+    line-height: 180%;
 }
 
 #skills-section .btn {

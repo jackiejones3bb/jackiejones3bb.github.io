@@ -57,37 +57,30 @@
     
     <header id="home-section" class="d-flex justify-content-center">
       <div class="container home-container d-flex align-items-center justify-content-center">
-        <div class="container home-inner-container d-flex align-items-center">
-          <div class="row align-items-center">
-            <div class="col-md-6 pt-4">
+        <div class="container home-inner-container d-flex align-items-center justify-content-center">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="col align-items-center justify-content-center">
               <h1 class="">Jackie Jones</h1>
               <h4 class="">Web Developer & Designer</h4>
-              <a class="btn" href="#about-section" role="button">Learn a little more about me 
-                <i class="fa fa-arrow-circle-down mx-2"></i>
+              <a class="btn d-flex justify-content-center" href="#about-section" role="button">Learn a little more about me 
+                <i class="fa fa-arrow-circle-down mx-3 my-1"></i>
               </a>
-            </div>
-            <div class="col-md-5">
-              <img
-                  src="img/header-image2.jpg"
+              <div class="icons d-flex align-items-center justify-content-center p-5">
+                <a href="https://www.linkedin.com/in/jacqueline-jones-0881ab1a3/" target="_blank">
+                  <img
+                  src="img/linkedin-icon-brown.png"
                   alt=""
-                  class="img-fluid mb-3 thumbnail"
-                />
-            </div>
-            <div class="col-md-1 align-self-start">
-              <a href="https://www.linkedin.com/in/jacqueline-jones-0881ab1a3/" target="_blank">
-                <img
-                src="img/linkedin-icon-brown.png"
-                alt=""
-                class="img-fluid mb-3 thumbnail"
-                />
-              </a>
-              <a href="https://github.com/jackiejones3bb" target="_blank">
-                <img
-                src="img/github-icon-brown.png"
-                alt=""
-                class="img-fluid mb-3 thumbnail"
-                />
-              </a>
+                  class="img-fluid p-1 thumbnail"
+                  />
+                </a>
+                <a href="https://github.com/jackiejones3bb" target="_blank">
+                  <img
+                  src="img/github-icon-brown.png"
+                  alt=""
+                  class="img-fluid p-1 thumbnail"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -102,16 +95,16 @@
           <div class="row p-5 my-2">
             <div class="col-md">
               <img
-                src="img/home-hero-image3.jpg"
+                src="img/header-image2.jpg"
                 alt=""
-                class="img-fluid mb-3 thumbnail"
+                class="img-fluid pr-2 mb-3 thumbnail"
               />
             </div>
             <div class="col-md">
               <h2>About Me</h2>
               <hr>
-              <p>
-                Hi, I'm Jackie, a web developer/designer and graphic artist with a passion for helping people. And I'm ridiculously detail-oriented. I spent the early part of my career working mainly in the realm of product packaging design before moving into a role of marketing specialist. But, after a while, I just wasn't feeling my corporate career anymore and my heart called me in a different direction. <br><br>I wanted to save the world...that's an attainable goal, right? So, I went to nursing school and spent 10+ years working as an oncology nurse alongside some of the most amazing doctors, coworkers, and patients. I learned so much and am beyond grateful for my time as an RN becasue it helped to shape the person that I am today. <br><br>I missed being a designer and the creative problem-solving that came with it. I made the decison to transition back into a design-based career, and being the perpetual learner that I am, I focused on increasing my technical skills and abilities in web development. This is a journey that quite literally come full circle for me and I'm excited to be back to doing what I love. 
+              <p class="about-text">
+                Hi, I'm Jackie, a web developer/designer and graphic artist with a passion for helping people...and I'm ridiculously detail-oriented. I spent the early part of my career working mainly in the realm of product packaging design before moving into a role as a marketing specialist. But, after a while, I just wasn't feeling my corporate career anymore and my heart called me in a different direction. <br><br>I wanted to save the world...that's an attainable goal, right? So, I went to nursing school and spent 10+ years working as an oncology nurse alongside some of the most amazing doctors, coworkers, and patients. I learned so much and am beyond grateful for my time as an RN becasue it helped to shape the person that I am today. <br><br>I missed being a designer and the creative problem-solving that came with it. I made the decison to transition back into a design-based career, and being the perpetual learner that I am, I focused on increasing my technical skills and abilities in web development. This is a journey that has quite literally come full circle for me and I'm excited to be back to doing what I love. 
               </p>
               </div>
             </div>
@@ -129,7 +122,7 @@
           <div class="col-md">
             <h2>My Skills</h2>
             <hr>
-            <p>
+            <p class="skills-text">
               As part of my never-ending journey to learn new things, I am currently enrolled in the intensive Web Development program at Eleven Fifty Academy, where I have gained experience working in HTML and CSS, as well as JavaScript, Bootstrap, and Github. Professionally, I have experience with a variety of design based programs, including Adobe Photoshop, Illustrator, InDesign, and XD. I have a strong understanding of UX/UI design concepts and a background in marketing. <br><br>
             </p>
             <a class="btn mb-3" href="img/Jacqueline Jones Resume.pdf" role="button">Download My Resume</a>
@@ -349,18 +342,11 @@
       $("body").scrollspy({ target: "#main-nav" });
 
       // Smooth Scrolling
-      $("main-nav a").on("click", function (e) {
-        if (this.hash !== "") {
-          e.preventDefault();
-
-          const hash = this.hash;
-
-          $("html, body").animate({
-              scrollTop: $(hash).offset().top,
-            }, 900, function () {
-              window.location.hash = hash;
-            });
-        }
+      $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
+      var sectionTo = $(this).attr('href');
+        $('html, body').animate({
+          scrollTop: $(sectionTo).offset().top
+        }, 1200);
       });
     </script>
   </body>
